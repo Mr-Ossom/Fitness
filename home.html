@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness App - Home</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="bg-black/100 text-gray-100">
+  <!-- Top nav -->
+   <section class="h-15 w-screen py-3">
+      <nav class="flex flex-row justify-between px-8">
+        <div>
+          Try
+        </div>
+
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell-dot-icon lucide-bell-dot"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M13.916 2.314A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.74 7.327A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673 9 9 0 0 1-.585-.665"/><circle cx="18" cy="8" r="3"/></svg>
+        </div>
+
+      </nav>
+   </section>
+
+   <!-- Welcome section -->
+  <section class="px-3 flex flex-row justify-center mt-5 mb-9">
+    <div>
+      <img src="images/pic.jpg" class="w-28 h-30 rounded-lg">
+    </div>
+
+    <div>
+      <h1 id="welcomeUser" class="font-bold text-3xl pl-3"></h1>
+      <p class="pl-3">⭐ 95% Healthy</p>
+    </div>
+  </section>
+
+  <!-- Fitness tracking -->
+  <section class="px-2 space-y-7 mb-9">
+    <div class="flex flex-row justify-between">
+      <h1 class="text-2xl font-bold">Fitness tracking</h1>
+
+      <p class="text-sm text-orange-500">See all</p>
+    </div>
+
+    <!-- Cards -->
+    <div class="flex gap-4 ">
+      <!-- Steps -->
+      <div class="flex flex-col items-center justify-center w-28 h-24 rounded-2xl bg-orange-100 shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h2m2 0h2m2 0h2m2 0h2M5 12a2 2 0 100 4h2m2 0h2m2 0h2m2 0h2a2 2 0 100-4M5 12a2 2 0 012-2h2m2 0h2m2 0h2m2 0h2a2 2 0 012 2"/>
+          </svg>
+        <span class="text-xl font-medium text-gray-700">Steps</span>
+      </div>
+
+  <!-- Water -->
+  <div class="flex flex-col items-center justify-center w-28 h-24 rounded-2xl bg-blue-100 shadow-sm">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22c4.418 0 8-3.582 8-8 0-4.664-4.846-10.364-7.057-12.364a1 1 0 00-1.886 0C8.846 3.636 4 9.336 4 14c0 4.418 3.582 8 8 8z" />
+    </svg>
+    <span class="text-xl font-medium text-gray-700">Water</span>
+  </div>
+
+  <!-- Weight -->
+  <div class="flex flex-col items-center justify-center w-28 h-24 rounded-2xl bg-purple-100 shadow-sm">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 3h12v4H6V3zm0 6h12v12H6V9z" />
+    </svg>
+    <span class="text-xl font-medium text-gray-700">Weight</span>
+  </div>
+</div>
+
+  </section>
+
+  <!-- Meal plan -->
+  <section class="">
+    <div class="flex flex-row justify-between px-2">
+      <h1 class="text-2xl font-bold mb-5">Meal Plans</h1>
+
+      <p class="text-sm text-orange-500">See all</p>
+    </div>
+    
+    <!-- Top buttons -->
+    <div class="space-x-4 px-3 mb-5">
+      <button id="break" class="px-3 py-1 rounded-full bg-gray-900 text-xl font-bold">Breakfast</button>
+      <button id="lunch" class="px-3 py-1 rounded-full bg-gray-100 text-black text-xl font-bold">Lunch</button>
+      <button id="dinner" class="px-3 py-1 rounded-full bg-gray-100 text-black text-xl font-bold">Dinner</button>
+    </div>
+                  
+                  <!-- food section -->
+   
+    <!-- Breakfast -->
+    <div id="breakfastCard" class="p-4 h-80">
+      <div class="flex w-90 h-50 items-center justify-between rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg overflow-hidden">
+        
+        <!-- Food Info -->
+        <div class="p-2 flex-1">
+          <h2 class="text-lg font-semibold text-orange-500">Mixed Berries</h2>
+          <div class="grid grid-cols-2 gap-y-2 mt-3 text-lg">
+            <p><span class="font-bold text-orange-500">1/2</span> cup (75g)</p>
+            <p><span class="font-bold text-orange-500">1g</span> Protein</p>
+            <p><span class="font-bold text-orange-500">15g</span> Carbs</p>
+            <p><span class="font-bold text-orange-500">40g</span> Calories</p>
+          </div>
+        </div>
+
+        <!-- Food Image -->
+        <div class="w-40 h-40 overflow-hidden rounded-full m-4 shadow-md">
+          <img src="images/breakfast.jpg" alt="Mixed Berries" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+
+<!-- Lunch -->
+    <div id="lunchCard" class="p-4 h-80">
+      <div class="flex w-90 h-50 items-center justify-between rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg overflow-hidden">
+        
+        <!-- Food Info -->
+        <div class="p-2 flex-1">
+          <h2 class="text-lg font-semibold text-green-600">Grilled Chicken Salad</h2>
+          <div class="grid grid-cols-2 gap-y-2 mt-3 text-lg">
+            <p><span class="font-bold text-green-600">250g</span> Serving</p>
+            <p><span class="font-bold text-green-600">30g</span> Protein</p>
+            <p><span class="font-bold text-green-600">12g</span> Carbs</p>
+            <p><span class="font-bold text-green-600">350</span> Calories</p>
+          </div>
+        </div>
+
+        <!-- Food Image -->
+        <div class="w-40 h-40 overflow-hidden rounded-full m-4 shadow-md">
+          <img src="images/lunch.jpg" alt="Grilled Chicken Salad" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+
+    <!-- Dinner -->
+    <div id="dinnerCard" class="p-4 h-80">
+      <div class="flex w-90 h-50 items-center justify-between rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg overflow-hidden">
+        
+        <!-- Food Info -->
+        <div class="p-2 flex-1">
+          <h2 class="text-lg font-semibold text-purple-600">Salmon with Vegetables</h2>
+          <div class="grid grid-cols-2 gap-y-2 mt-3 text-lg">
+            <p><span class="font-bold text-purple-600">250g</span> Serving</p>
+            <p><span class="font-bold text-purple-600">30g</span> Protein</p>
+            <p><span class="font-bold text-purple-600">12g</span> Carbs</p>
+            <p><span class="font-bold text-purple-600">350</span> Calories</p>
+          </div>
+        </div>
+
+        <!-- Food Image -->
+        <div class="w-40 h-40 overflow-hidden rounded-full m-4 shadow-md">
+          <img src="images/dinner.jpg" alt="Grilled Chicken Salad" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Training plans -->
+   <section class="px-6 bg-black w-screen h-100">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="flex flex-row justify-between px-2">
+        <h1 class="text-2xl font-bold mb-5">Training plans</h1>
+
+        <p class="text-sm text-orange-500">See all</p>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex justify-center space-x-4 mb-8">
+        <button id="btnBeginner" class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">Beginner</button>
+        <button id="btnIntermediate" class="px-4 py-2 bg-green-600 text-white rounded-full hover:bg-green-700">Intermediate</button>
+        <button id="btnAdvanced" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-red-700">Advanced</button>
+      </div>
+
+      <!-- Beginner Plan -->
+      <div id="beginnerPlan" class="plan-card">
+        <h3 class="text-xl font-semibold mb-4">Beginner Plan</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li>🏋️ 3 days a week</li>
+          <li>🔥 20 mins cardio</li>
+          <li>💪 Full-body workouts</li>
+          <li>🧘 Stretching & recovery</li>
+        </ul>
+      
+      </div>
+
+      <!-- Intermediate Plan -->
+      <div id="intermediatePlan" class="plan-card hidden">
+        <h3 class="text-xl font-semibold mb-4">Intermediate Plan</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>🏋️ 4-5 days a week</li>
+            <li>🔥 30 mins cardio</li>
+            <li>💪 Push/Pull/Legs split</li>
+            <li>🧘 Yoga once a week</li>
+          </ul>
+      </div>
+
+      <!-- Advanced Plan -->
+      <div id="advancedPlan" class="plan-card hidden">
+        <h3 class="text-xl font-semibold mb-4">Advanced Plan</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>🏋️ 6 days a week</li>
+            <li>🔥 HIIT & cardio mix</li>
+            <li>💪 Strength & hypertrophy focus</li>
+            <li>🥗 Nutrition tracking required</li>
+          </ul>
+      </div>
+    </div>
+</section> 
+  
+  <!-- Bottom Navigation -->
+  <nav class="fixed bottom-0 left-0 w-full bg-gray-900 text-white flex justify-around items-center h-16 border-t border-gray-700">
+    <a href="#" class="flex flex-col items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house-icon lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      <span class="text-xs">Home</span>
+    </a>
+    <a href="#" class="flex flex-col items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-more-icon lucide-message-circle-more"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
+      <span class="text-xs">Chat</span>
+    </a>
+    <a href="#" class="flex flex-col items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+      <span class="text-xs">Add Task</span>
+    </a>
+    <a href="profile.html" class="flex flex-col items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round-icon lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+      <span class="text-xs">Profile</span>
+    </a>
+  </nav>
+
+  <script>
+    // Get username from localStorage
+    const user = localStorage.getItem("fitnessUser");
+    if (user) {
+      document.getElementById("welcomeUser").textContent = `Hello, ${user}!`;
+    };
+
+    // For meal
+  const breakfastCard = document.getElementById("breakfastCard");
+  const lunchCard = document.getElementById("lunchCard");
+  const dinnerCard = document.getElementById("dinnerCard");
+
+  const btnBreakfast = document.getElementById("break");
+  const btnLunch = document.getElementById("lunch");
+  const btnDinner = document.getElementById("dinner");
+
+  // show breakfast
+  breakfastCard.classList.remove("hidden");
+  lunchCard.classList.add("hidden");
+  dinnerCard.classList.add("hidden");
+
+  // Show lunch
+  btnLunch.addEventListener("click", () => {
+    breakfastCard.classList.add("hidden");
+    lunchCard.classList.remove("hidden");
+    dinnerCard.classList.add("hidden")
+  });
+
+  // Show breakfast
+  btnBreakfast.addEventListener("click", () => {
+    lunchCard.classList.add("hidden");
+    breakfastCard.classList.remove("hidden");
+    dinnerCard.classList.add("hidden");
+  });
+
+  // Show dinner
+  btnDinner.addEventListener("click", () => {
+    breakfastCard.classList.add("hidden");
+    lunchCard.classList.add("hidden");
+    dinnerCard.classList.remove("hidden");
+  });
+
+  // For workout
+  const beginnerPlan = document.getElementById("beginnerPlan");
+  const intermediatePlan = document.getElementById("intermediatePlan");
+  const advancedPlan = document.getElementById("advancedPlan");
+
+  const btnBeginner = document.getElementById("btnBeginner");
+  const btnIntermediate = document.getElementById("btnIntermediate");
+  const btnAdvanced = document.getElementById("btnAdvanced");
+
+  // Show beginner by default
+  beginnerPlan.classList.remove("hidden");
+
+  // Event listeners
+  btnBeginner.addEventListener("click", () => {
+    beginnerPlan.classList.remove("hidden");
+    intermediatePlan.classList.add("hidden");
+    advancedPlan.classList.add("hidden");
+  });
+
+  btnIntermediate.addEventListener("click", () => {
+    beginnerPlan.classList.add("hidden");
+    intermediatePlan.classList.remove("hidden");
+    advancedPlan.classList.add("hidden");
+  });
+
+  btnAdvanced.addEventListener("click", () => {
+    beginnerPlan.classList.add("hidden");
+    intermediatePlan.classList.add("hidden");
+    advancedPlan.classList.remove("hidden");
+  });
+</script>
+  </script>
+</body>
+</html>
