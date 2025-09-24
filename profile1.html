@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AthletIQ || Profile Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-h-screen bg-gray-900 flex items-center justify-center p-6">
+    <header id="header" class="w-screen fixed px-5 py-3 top-0 left-0 bg-transparent shadow-md z-50">
+    <button class="text-gray-200 hover:text-white focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" 
+            viewBox="0 0 24 24" fill="none" stroke="#f9f5f5" stroke-width="2" 
+            stroke-linecap="round" stroke-linejoin="round" 
+            class="lucide lucide-move-left">
+        <path d="M6 8L2 12L6 16"/><path d="M2 12H22"/>
+        </svg>
+    </button>
+    </header>
+
+    <div class="bg-gray-800 w-full max-w-2xl mt-16 mb-30 rounded-2xl shadow-lg p-8 text-gray-200">
+
+    <!-- Header -->
+    <div class="flex flex-col space-y-4 mb-6">
+        <div class="flex flex-row items-center space-x-4">
+        <div class="w-20 h-20 rounded-full bg-gray-700 flex items-center justify-center text-gray-400">
+            Upload
+        </div>
+        <div>
+            <h2 id="userName" class="text-2xl font-bold text-white">New User</h2>
+            <p class="text-gray-400 text-sm">Let’s set up your profile</p>
+        </div>
+        </div>
+
+        <button class="ml-auto bg-green-600 text-white px-4 py-2 rounded-xl hover:bg-green-700 transition">
+        Complete Profile
+        </button>
+    </div>
+
+    <!-- Personal Info (Empty State) -->
+    <div class="mb-6">
+        <h3 class="text-lg font-semibold text-gray-300 mb-3">Personal Information</h3>
+        <div class="grid grid-cols-2 gap-4">
+        <div>
+            <p class="text-sm text-gray-400">Age</p>
+            <p class="font-medium text-gray-100 italic">Not set</p>
+        </div>
+        <div>
+            <p class="text-sm text-gray-400">Weight</p>
+            <p class="font-medium text-gray-100 italic">Not set</p>
+        </div>
+        <div>
+            <p class="text-sm text-gray-400">Height</p>
+            <p class="font-medium text-gray-100 italic">Not set</p>
+        </div>
+        <div>
+            <p class="text-sm text-gray-400">Goal</p>
+            <p class="font-medium text-gray-100 italic">Not set</p>
+        </div>
+        </div>
+    </div>
+
+    <!-- Fitness Progress (Empty State) -->
+    <div class="mb-6">
+        <h3 class="text-lg font-semibold text-gray-300 mb-3">Progress Overview</h3>
+        <div class="grid grid-cols-3 gap-4 text-center">
+        <div class="bg-gray-700 p-4 rounded-xl shadow-sm">
+            <p class="text-xl font-bold text-gray-400">0</p>
+            <p class="text-sm text-gray-400">Workouts</p>
+        </div>
+        <div class="bg-gray-700 p-4 rounded-xl shadow-sm">
+            <p class="text-xl font-bold text-gray-400">0 kg</p>
+            <p class="text-sm text-gray-400">Gained</p>
+        </div>
+        <div class="bg-gray-700 p-4 rounded-xl shadow-sm">
+            <p class="text-xl font-bold text-gray-400">0</p>
+            <p class="text-sm text-gray-400">Day Streak</p>
+        </div>
+        </div>
+    </div>
+
+    <!-- Account Settings -->
+    <div>
+        <h3 class="text-lg font-semibold text-gray-300 mb-3">Account Settings</h3>
+        <ul class="space-y-3">
+        <li class="flex items-center justify-between p-3 bg-gray-700 rounded-xl hover:bg-gray-600 cursor-pointer">
+            <span class="text-gray-200">Set Up Account</span>
+            <span class="text-gray-400">&rsaquo;</span>
+        </li>
+        <li class="flex items-center justify-between p-3 bg-gray-700 rounded-xl hover:bg-gray-600 cursor-pointer">
+            <span class="text-gray-200">Notification Preferences</span>
+            <span class="text-gray-400">&rsaquo;</span>
+        </li>
+        <li class="flex items-center justify-between p-3 bg-gray-700 rounded-xl hover:bg-gray-600 cursor-pointer">
+            <span class="text-gray-200">Privacy Settings</span>
+            <span class="text-gray-400">&rsaquo;</span>
+        </li>
+        </ul>
+    </div>
+    </div>
+
+     <!-- Bottom Navigation -->
+  <nav class="fixed bottom-0 left-0 w-full bg-gray-900 text-white flex justify-around items-center h-16 border-t border-gray-700">
+    <a href="home1.html" class="flex flex-col items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house-icon lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      <span class="text-xs">Home</span>
+    </a>
+    <a href="#" class="flex flex-col items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-more-icon lucide-message-circle-more"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
+      <span class="text-xs">Chat</span>
+    </a>
+    <a href="#" class="flex flex-col items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+      <span class="text-xs">Add Task</span>
+    </a>
+    <a href="#" class="flex flex-col items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round-icon lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+      <span class="text-xs">Profile</span>
+    </a>
+  </nav>
+
+  <script>
+    // Header scroll effect
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById("header");
+      if (window.scrollY > 10) {
+        header.classList.add("bg-gray-800", "shadow-lg");
+        header.classList.remove("bg-transparent", "shadow-md");
+      } else {
+        header.classList.remove("bg-gray-800", "shadow-lg");
+        header.classList.add("bg-transparent", "shadow-md");
+      }
+    });
+  </script>
+</body>
+</html>

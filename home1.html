@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AthletIQ || Welcome Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-black/100 text-gray-100">
+  <!-- Top nav -->
+  <section class="h-16 w-screen py-3">
+    <nav class="flex flex-row justify-between px-8">
+      <div class="font-bold text-xl">Welcome</div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" 
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+             stroke-linejoin="round" class="lucide lucide-user">
+          <path d="M20 21v-2a4 4 0 0 0-3-3.87M4 21v-2a4 4 0 0 1 3-3.87m6 0a4 4 0 0 1 6 3.87v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Welcome section -->
+  <section class="px-3 flex flex-col items-center text-center mt-8 mb-12">
+    <div class="w-32 h-32 rounded-full bg-gray-800 flex items-center justify-center shadow-md">
+      <span class="text-sm text-gray-400">Upload Photo</span>
+    </div>
+    <h1 id="welcomeUser" class="mt-5 font-bold text-3xl">Welcome New User 🎉</h1>
+    <p class="mt-2 text-gray-400">Let's set up your fitness journey</p>
+    <button class="mt-5 px-6 py-2 bg-orange-500 text-white rounded-full shadow-lg hover:bg-orange-600">
+      Get Started
+    </button>
+  </section>
+
+  <!-- Fitness tracking (empty state) -->
+  <section class="px-4 space-y-6 mb-12">
+    <div class="flex flex-row justify-between">
+      <h1 class="text-2xl font-bold">Fitness tracking</h1>
+    </div>
+    <div class="w-full px-3 flex items-center justify-center h-32 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg">
+      <p class="text-gray-400">No data yet. Start tracking your steps, water, and weight.</p>
+    </div>
+  </section>
+
+  <!-- Meal plan -->
+  <section class="px-4 mb-12">
+    <div class="flex flex-row justify-between">
+      <h1 class="text-2xl font-bold">Meal Plans</h1>
+    </div>
+    <div class="w-full flex items-center justify-center h-32 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg">
+      <p class="text-gray-400">Add your first meal plan to begin.</p>
+    </div>
+  </section>
+
+  <!-- Training plans -->
+  <section class="px-4 mb-22">
+    <div class="flex flex-row justify-between">
+      <h1 class="text-2xl font-bold">Training Plans</h1>
+    </div>
+    <div class="w-full flex flex-col items-center justify-center h-40 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg">
+      <p class="text-gray-400 mb-4">No training plan created yet.</p>
+      <button class="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">
+        Create Plan
+      </button>
+    </div>
+  </section>
+
+  <!-- Bottom Navigation -->
+  <nav class="fixed bottom-0 left-0 w-full bg-gray-900 text-white flex justify-around items-center h-16 border-t border-gray-700">
+    <a href="#" class="flex flex-col items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house-icon lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      <span class="text-xs">Home</span>
+    </a>
+    <a href="#" class="flex flex-col items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-more-icon lucide-message-circle-more"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
+      <span class="text-xs">Chat</span>
+    </a>
+    <a href="#" class="flex flex-col items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+      <span class="text-xs">Add Task</span>
+    </a>
+    <a href="profile1.html" class="flex flex-col items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round-icon lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+      <span class="text-xs">Profile</span>
+    </a>
+  </nav>
+</body>
+
+<script>
+    const user = localStorage.getItem("fitnessUser");
+    if (user) {
+      document.getElementById("welcomeUser").textContent = `Welcome, ${user} 🎉`;
+    };
+</script>
+</html>
