@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Tasks</title>
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex items-center justify-center px-7">
+  <div class="w-full max-w-2xl bg-gray-800 rounded-2xl shadow-lg py-3 px-4 ">
+    <h2 class="text-2xl font-bold text-center mb-6 text-green-400">My Fitness Tasks</h2>
+
+    <!-- Input row -->
+    <div class="flex gap-2">
+      <input type="text" id="taskInput" placeholder="Add workout task..." class="flex-1 px-4 py-2 rounded-lg bg-gray-700 border border-gray-600 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-400">
+      <button onclick="addTask()" class="px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg font-semibold transition">Add
+    </div>
+
+    <!-- Task list -->
+    <ul id="taskList" class="mt-6 space-y-3"></ul>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <nav class="fixed bottom-0 left-0 w-full bg-gray-900 text-white flex justify-around items-center h-16 border-t border-gray-700">
+    <a href="home.html" class="flex flex-col items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house-icon lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      <span class="text-xs">Home</span>
+    </a>
+    <a href="#" class="flex flex-col items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-more-icon lucide-message-circle-more"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
+      <span class="text-xs">Chat</span>
+    </a>
+    <a href="#" class="flex flex-col items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+      <span class="text-xs">Add Task</span>
+    </a>
+    <a href="profile.html" class="flex flex-col items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round-icon lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+      <span class="text-xs">Profile</span>
+    </a>
+  </nav>
+
+  <script>
+    const input = document.getElementById("taskInput");
+    const list = document.getElementById("taskList");
+
+    // Add Task
+    function addTask() {
+      const taskText = input.value.trim();
+      if (taskText === "") return;
+
+      const li = document.createElement("li");
+      li.className = "flex justify-between items-center bg-gray-700 px-4 py-3 rounded-lg shadow-sm";
+
+      li.innerHTML = `<span class="text-gray-200">${taskText}</span>
+        <button onclick="deleteTask(this)" class="text-red-400 hover:text-red-600 font-bold">✖</button>`;
+
+      list.appendChild(li);
+      input.value = "";
+    }
+
+    // Delete Task
+    function deleteTask(el) {
+      el.parentElement.remove();
+    }
+  </script>
+</body>
+</html>
