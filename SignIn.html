@@ -1,55 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-</head>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
 
-<body class="bg-[url(images/signinbg.jpg)] bg-cover ">
+        // Firebase config (same as in signup page)
+        const firebaseConfig = {
+        apiKey: "AIzaSyBTgHr0w3bjsc-mJQpYi9aG-6Blodx8N6Y",
+        authDomain: "signup-2f0aa.firebaseapp.com",
+        projectId: "signup-2f0aa",
+        storageBucket: "signup-2f0aa.firebasestorage.app",
+        messagingSenderId: "133067690171",
+        appId: "1:133067690171:web:44d73a4651dd29f738599e",
+        measurementId: "G-35C9C5WC6N"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        // Sign In function
+        window.handleSignin = async (event) => {
+        event.preventDefault();
+
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        try {
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            const user = userCredential.user;
+
+            alert("Welcome back, " + user.email);
+
+            // Redirect to home page
+            window.location.href = "home1.html";
+        } catch (error) {
+            alert("Login failed: " + error.message);
+        }
+        };
+    </script>
+    </head>
+
+    <body class="bg-[url(images/signinbg.jpg)] bg-cover ">
     <div class="w-screen h-30 px-10 flex items-end">
-        <h2 class="text-4xl font-medium text-white text-start ">Sign In To Your Account</h2>
+        <h2 class="text-4xl font-medium text-white text-start">Sign In To Your Account</h2>
     </div>
-     
+    
     <!-- Forms -->
     <div class="flex items-center justify-center h-100">
-        <form onsubmit="handleSignin(event)" class="p-8 rounded w-96">
-            <div class="mb-8">
-
-                <input type="text" id="username" placeholder="User Name" class="mt-1 block w-full text-gray-200 text-xl border border-gray-300 rounded-2xl p-2 placeholder:text-gray-200" required>
-            </div>
-            <div class="mb-8">
-
-                <input type="password" id="password" placeholder="Password" class="mt-1 block w-full text-gray-200 text-xl border border-gray-300 rounded-2xl p-2 placeholder:text-gray-200" required>
-            </div>
-            <button type="submit" class="w-full bg-gray-100 text-blue-900 py-2 font-bold rounded-2xl hover:bg-blue-600 uppercase">Sign In</button>
+        <form onsubmit="handleSignin(event)" class="p-8 rounded w-96 bg-black/50">
+        <div class="mb-8">
+            <input type="email" id="email" placeholder="E-Mail" class="mt-1 block w-full text-gray-200 text-xl border border-gray-300 rounded-2xl p-2 placeholder:text-gray-200" required>
+        </div>
+        <div class="mb-8">
+            <input type="password" id="password" placeholder="Password" class="mt-1 block w-full text-gray-200 text-xl border border-gray-300 rounded-2xl p-2 placeholder:text-gray-200" required>
+        </div>
+        <button type="submit" class="w-full bg-gray-100 text-blue-900 py-2 font-bold rounded-2xl hover:bg-blue-600 uppercase">Sign In</button>
         </form>
     </div>
 
     <!-- Sign Up Link -->
     <div class="flex items-center justify-center mt-4">
-        <p class="text-gray-200">Don't have an account? <a href="signup.html" class="text-blue-700 hover:underline">Sign Up</a></p>
+        <p class="text-gray-200">Don't have an account?
+        <a href="signup.html" class="text-blue-700 hover:underline">Sign Up</a>
+        </p>
     </div>
-
-    <!-- Script -->
-    <script>
-        function handleSignin(event) {
-        event.preventDefault();
-
-        // Get form values
-        const username = document.getElementById("username").value.trim();
-        const password = document.getElementById("password").value.trim();
-
-        if (username && password) {
-            localStorage.setItem("fitnessUser", username);
-
-            window.location.href = "home.html";
-        } else {
-            alert("Please fill in all fields!");
-        }
-        }
-  </script>
-</body>
-</html>
+    </body>
+    </html>
